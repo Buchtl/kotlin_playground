@@ -11,15 +11,15 @@ class DateUtilsTest {
   private val dateTo: LocalDateTime = LocalDateTime.of(2024, 1, 8, 18, 55, 0, 366190294)
 
   private val unsortedDates = listOf(
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294),
-    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 366190294)
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0),
+    LocalDateTime.of(2024, 1, 18, 18, 55, 0, 0)
   )
 
   @Test fun testNormalizeDate() {
