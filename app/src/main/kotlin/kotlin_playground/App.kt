@@ -19,13 +19,11 @@ fun main() {
   println(App().greeting)
   val data = ObjectWithValidity(validFrom = null, validTo = LocalDateTime.now())
   println(data.validTo)
-  val values = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
-  val index = values.indexOf(5)
+  val index = 5
+  val values: List<Int> = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9).also{ it.remove(it.indexOf(index+1)) }
   println("Split at index $index ")
-  //values.groupBy { it > 5 }.forEach { b, ints -> println("Sublist exists $b with $ints") }
   val grouped = values.groupBy { it > 5 }
   println("group true: ${grouped[true]}")
   println("group false: ${grouped[false]?.reversed() }")
-  println("without 5: ${values.groupBy { it < 5 }[true]?.reversed() }")
 
 }
