@@ -5,6 +5,7 @@ package kotlin_playground
 
 import kotlin_playground.sandboxes.DateSandbox
 import kotlin_playground.sandboxes.ListSandbox
+import kotlin_playground.sandboxes.NullSandbox
 
 class App {
   val greeting: String
@@ -17,4 +18,5 @@ fun main() {
   println(App().greeting)
   DateSandbox.objectWithValidity()
   ListSandbox.split()
+  NullSandbox.nuller()
 }
