@@ -5,23 +5,20 @@ Just for exploration
 
 
 ## Something completely different, and its not Python!
-### Java Optinal
+### Java Optional
 ```java
 import java.util.Optional;
 
 class Scratch {
-public static void main(String[] args) {
-String nullString = null;
+  public static void main(String[] args) {
+    String nullString = null;
+    Optional.ofNullable(nullString).ifPresent(o -> System.out.println(o));
+  
+    String orElse = Optional.ofNullable(nullString).orElse("nullString is null");
+    System.out.println("OrElse: " + orElse);
 
-        Optional.ofNullable(nullString).ifPresent(o -> System.out.println(o));
-
-
-        String orElse = Optional.ofNullable(nullString).orElse("nullString is null");
-        System.out.println("OrElse: " + orElse);
-
-        Optional<String> oString = Optional.empty();
-
-        oString.ifPresentOrElse(s -> System.out.println(s), () -> System.out.println("oString is empty"));
-    }
+    Optional<String> oString = Optional.empty();
+    oString.ifPresentOrElse(s -> System.out.println(s), () -> System.out.println("oString is empty"));
+  }
 }
 ```
